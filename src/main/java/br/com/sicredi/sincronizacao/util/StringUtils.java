@@ -14,7 +14,7 @@ public class StringUtils {
 
   public static String getResultFilePath(String filePath, String newFileName) {
     String directoryPath = getDirectoryPath(filePath);
-    return directoryPath.concat("/").concat(newFileName);
+    return directoryPath.concat(File.separator).concat(newFileName);
   }
 
 }
