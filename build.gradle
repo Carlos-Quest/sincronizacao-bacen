@@ -1,0 +1,48 @@
+plugins {
+  id 'java'
+  id 'org.springframework.boot' version '3.3.0'
+  id 'io.spring.dependency-management' version '1.1.5'
+}
+
+apply plugin: 'org.springframework.boot'
+
+group = 'br.com.sicredi'
+version = '0.0.1-SNAPSHOT'
+
+java {
+  sourceCompatibility = '17'
+}
+
+configurations {
+  compileOnly {
+    extendsFrom annotationProcessor
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  implementation 'org.springframework.boot:spring-boot-starter-aop'
+  implementation 'org.apache.commons:commons-lang3:3.14.0'
+  implementation 'com.opencsv:opencsv:5.9'
+  developmentOnly 'org.springframework.boot:spring-boot-devtools'
+  compileOnly 'org.projectlombok:lombok'
+  annotationProcessor 'org.projectlombok:lombok'
+
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
+  testImplementation 'org.junit.jupiter:junit-jupiter'
+  testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+  testCompileOnly 'org.projectlombok:lombok:1.18.30'
+  testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+tasks.named('test') {
+  useJUnitPlatform()
+}
+
+bootJar {
+  mainClass = 'br.com.sicredi.sincronizacao.SincronizadorBacen'
+}

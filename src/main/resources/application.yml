@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: sincronizacao
+
+server:
+  port: 9090
