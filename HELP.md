@@ -1,25 +1,15 @@
-# Getting Started
+# Sincronização Bacen
 
-### Reference Documentation
+### Instruções
 
-For further reference, please consider the following sections:
+**1º** - Executar o comando ./gradlew clean bootJar para gerar o jar do projeto
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.2.6/gradle-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.2.6/gradle-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/3.2.6/reference/htmlsingle/index.html#web)
+**2º** - Executar o comando java -jar build/libs/sincronizacao-bacen-0.0.1-SNAPSHOT.jar <caminho_arquivo> Exemplo: /home/carlos/DATA.csv
 
-### Guides
+**3º** - Após a execução será criado um arquivo DATA-RESULT.csv no mesmo diretório que foi informado por parâmetro
 
-The following guides illustrate how to use some features concretely:
+### Observações
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-
-### Additional Links
-
-These additional references should also help you:
-
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
+* O projeto foi desenvolvido em Java 17
+* Contempla testes unitários
 
